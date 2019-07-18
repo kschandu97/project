@@ -1,0 +1,23 @@
+<h2 align ="center" style="background-color:aqua">Add Details</h2>
+<table align="center">
+        <thead class="thead-dark">
+    <tr>
+        <td>Name</td>
+        <input type="text" class="form-control" name="name" id="ename" [(ngModel)]="empName" #nameControl="ngModel" required />
+        <span  class="alert alert-danger" role="alert" *ngIf="nameControl.touched && nameControl.invalid">Name is required</span>  
+    </tr>
+    <tr>
+            <td>Address</td>
+            <input type="text" class="form-control" name="name" id="eaddress" [(ngModel)]="empAddress" #addressControl="ngModel" required  >
+            <span  class="alert alert-danger" role="alert" *ngIf="addressControl.touched && addressControl.invalid">Address is required</span>  
+    </tr>
+    <tr>
+            <td>Pincode</td>
+            <input type="text" class="form-control" name="pincode" id="epincode" [(ngModel)]="empPincode" #pincodeControl="ngModel" required  >
+                <span  class="alert alert-danger" role="alert" *ngIf="pincodeControl.touched && pincodeControl.invalid">Salary should be filled</span> 
+    </tr>
+    <tr>
+        <td><input type="button"  class ="btn btn-primary"value="save"  /></td>
+    </tr>
+    </thead>
+    </table>
